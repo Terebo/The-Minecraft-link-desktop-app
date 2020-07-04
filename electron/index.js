@@ -1,18 +1,22 @@
-const { app, BrowserWindow } = require('electron')
+const { app, BrowserWindow } = require('electron');
 
 function createWindow () {
   // Create the browser window.
   const win = new BrowserWindow({
     width: 100,
     height: 100,
+    minheight: 50,
+    minWidth: 100,
     webPreferences: {
       nodeIntegration: true
-    }
+    },
+    frame: false,
+    icon: __dirname +  '/img/Icon.png'
   })
 
   // and load the index.html of the app.
-  win.maximize();
   win.loadFile('index.html')
+  win.maximize();
 
 }
 

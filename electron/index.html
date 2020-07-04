@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title id="title"></title>
+    <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link rel="stylesheet" href="style.css">
+    <!--your normal font import
+    //roboto regular, Condensed and slab-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed&family=Roboto+Slab&display=swap" rel="stylesheet"> 
+
+    <script>
+      function loaded() {
+        console.log("document");
+        const customTitlebar = require('custom-electron-titlebar');
+        const Bcolour = getComputedStyle(document.documentElement).getPropertyValue('--HeaderBColour');
+        const Tcolour = getComputedStyle(document.documentElement).getPropertyValue('--HeaderTColour');
+        new customTitlebar.Titlebar({
+         backgroundColor: customTitlebar.Color.fromHex(Bcolour),
+         shadow: true,
+         icon: "img/cubelogo.svg"
+        });
+      };
+    </script>
+  </head>
+  <body onload="loaded();">
+    <h1>Hello welkom bij de officiele OMM meinkreft link</h1>
+    we gebruiken op t moment electron<script>document.write(process.versions.electron)</script>.
+  </body>
+</html>

@@ -1,0 +1,17 @@
+:root {
+    --HeaderBColour:#202225;
+    --HeaderTColour:#dadada;
+    --sans:'Roboto', sans-serif;
+    --serif:'Roboto Slab', serif;
+    --condensed:'Roboto condensed', condensed;
+    --BackgroundColour:#36393f;
+}
+
+.titlebar div{
+    color: var(--HeaderTColour);
+    font-family: var(--sans);
+}
+
+body {
+    background-color: var(--BackgroundColour);
+}

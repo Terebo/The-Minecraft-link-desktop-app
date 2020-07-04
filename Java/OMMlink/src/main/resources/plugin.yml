@@ -1,0 +1,18 @@
+main: Terebo.App
+name: OMMlink
+version: '0.0.1'
+description: Welcome to this plugin!
+load: POSTWORLD
+author: Terebo
+website: about:blank
+prefix: Welcome
+commands:
+   welcome:
+      description: A very simple thingy
+      usage: /<command>
+      permission: test.welcome
+      permission-message: you fool! you aren't allowed to do this!
+permissions:
+  test.welcome:
+    description: A very simple thingy
+    default: true
