@@ -6,11 +6,13 @@
     <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
     <link rel="stylesheet" href="style.css">
+    <script src="renderer.js"></script>
     <!--your normal font import
     //roboto regular, Condensed and slab-->
     <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed&family=Roboto+Slab&display=swap" rel="stylesheet"> 
 
     <script>
+      window.rows = 0;
       function loaded() {
         console.log("document");
         const customTitlebar = require('custom-electron-titlebar');
@@ -21,11 +23,15 @@
          shadow: true,
          icon: "img/cubelogo.svg"
         });
+        setInterval(() => {
+          reconnect()
+        }, 1000);
       };
     </script>
   </head>
   <body onload="loaded();">
     <h1>Hello welkom bij de officiele OMM meinkreft link</h1>
     we gebruiken op t moment electron<script>document.write(process.versions.electron)</script>.
+    <div id="container"></div>
   </body>
 </html>

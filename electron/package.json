@@ -1,5 +1,5 @@
 {
-  "name": "OMM interface",
+  "name": "your-app",
   "version": "0.1.0",
   "main": "index.js",
   "scripts": {
@@ -7,6 +7,9 @@
   },
   "dependencies": {
     "custom-electron-titlebar": "^3.2.2-hotfix62",
-    "electron": "^9.0.5"
+    "electron": "^9.0.5",
+    "jquery": "^3.5.1",
+    "mysql": "^2.18.1",
+    "underscore": "^1.10.2"
   }
 }

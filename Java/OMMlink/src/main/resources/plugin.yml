@@ -7,12 +7,12 @@ author: Terebo
 website: about:blank
 prefix: Welcome
 commands:
-   welcome:
-      description: A very simple thingy
+   reset:
+      description: Resets the database, automatic on every restart
       usage: /<command>
-      permission: test.welcome
+      permission: OMMLink.reset
       permission-message: you fool! you aren't allowed to do this!
 permissions:
-  test.welcome:
-    description: A very simple thingy
-    default: true
+  OMMLink.reset:
+    description: Resets the database
+    default: op
